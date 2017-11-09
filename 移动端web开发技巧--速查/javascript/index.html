@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*模拟按钮hover效果*/
+			a{-webkit-tap-highlight-color: rgba(0,0,0,0);} 
+			.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;} 
+			.btn-blue:active{background-color: #357AE8;}
+
+
+		</style>
+	</head>
+	<body>
+<!--/*模拟按钮hover效果*/-->
+		<div class="btn-blue">按钮</div>
+
+
+		<script type="text/javascript">
+//			模拟按钮hover效果
+			var btnBlue = document.querySelector(".btn-blue"); 
+			btnBlue.ontouchstart = function(){ this.className = "btn-blue btn-blue-on" } 
+			btnBlue.ontouchend = function(){ this.className = "btn-blue" }
+//          屏幕旋转的事件和样式
+			window.onorientationchange = function(){ 
+				switch(window.orientation){ 
+				case -90: case 90: alert("横屏:" + window.orientation); 
+				case 0: case 180: alert("竖屏:" + window.orientation); break; 
+				}
+			}
+//audio元素和video元素在ios和andriod中无法自动播放
+			//应对方案：触屏即播			
+			$('html').one('touchstart',function(){
+			    audio.play()
+			})
+			
+			
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

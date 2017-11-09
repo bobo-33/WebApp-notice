@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		<!--关闭iOS键盘首字母自动大写(在iOS中，默认情况下键盘是开启首字母大写的功能的，如果启用这个功能，可以这样：)-->
+		<input type="text" autocapitalize="off" />
+		
+		
+		<!--文件上传, 从相机捕获媒体--><!--使用总结：iOS有拍照、录像、选取本地图片功能；部分android只有选取本地图片功能；winphone不支持；input控件默认外观丑陋-->
+		<input type="file" accept = "image/*; capture=camera" />
+		<input type="file" accept = "video/*; capture=camcorder" />
+		<input type="file" accept = "audio/*; capture=microphone" />
+
+		<!--电话短信邮箱-->
+		<a href="sms:18888886666,18888885555">发送短信给多个人 的链接</a> 
+		<a href="sms:18888886666?body=sms txt">发送短信附带内容 的链接</a> 
+		<a href="tel:18888886666">Call us at 18888886666</a> 
+		<a href="mailto:dooyoe@gmail.com" >dooyoe@gmail.com</a>
+
+
+
+	</body>
+</html>
